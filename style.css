@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, Helvetica, 'Open Sans', sans-serif;
+}
+
+:root {
+    --black: #24292f;
+    --white: #f6f8fa;
+    --gray: #57606a;
+}
+
+a {
+    text-decoration: none;
+}
+.navbar {
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 16px; 
+}
+
+.navbar i.fab {
+    font-size: 32px;
+    background-color: var(--black);
+    color: white;
+    margin-right: 16px;
+}
+
+.navbar #searchUser {
+    background-color: transparent; 
+    word-wrap: break-word;
+    border-radius: 6px;
+    min-height: 28px;
+    color: white;
+    border: 1px solid var(--gray);
+    padding: 0 12px;
+    margin-right: 16px;
+    width: 272px;
+    transition: .1s ease-out;
+    max-width: 40%;
+} 
+.navbar #searchUser::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #d0d7de;
+    opacity: 1;
+    /* Firefox */
+}
+
+.navbar #searchUser:focus {
+    border: 1px solid var(--gray);
+    background-color: var(--white);
+    color: var(--black);
+    width: 438.094px;
+}
+
+.navbar .searchUser:focus-visible {
+    outline: 1px solid #0969da;
+    color: var(--black);
+}
+
+.navbar #searchUser:focus::placeholder {
+    color: var(--gray);
+}
+
+.navbar ul a {
+    font-weight: 500;
+    color: white;
+}
+
+.navbar ul a:hover {
+    opacity: .5;
+}
+
+.landing-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    z-index: 1;
+}
+
+.landing-page i.fab,
+.landing-page a { 
+  
+    font-size: 32px; 
+    padding-bottom: 14px;
+
+}
+
+.landing-page #searchUser {
+    order: 3;
+    background-color: white;  
+    word-wrap: break-word; 
+    min-height: 32px;
+    color: var(--black); 
+    width: 320px; 
+    max-width: 90%; 
+    margin-right: 0px;
+
+}
+.landing-page #searchUser::placeholder { 
+color: var(--gray); 
+}
+ 
+nav {   
+    margin-top: 24px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; 
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-gap: 20px;
+    background-color: white;
+    border-bottom: 1px solid #d0d7de;  
+}
+
+nav .user-profile {
+    margin-left: 60px;
+    display: flex;
+    align-self: flex-end;
+
+}
+
+nav .user-profile figure img {
+    border-radius: 50%;
+    width: 42px;
+    padding-right: 8px;
+}
+
+ 
+nav .user-profile h1 span {
+    font-size: 14px;
+    color: var(--black);
+}
+
+nav .user-profile figure, nav .user-profile h1 {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+ 
+    display: flex;
+    /* justify-content: center; */
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+nav ul li {
+    padding: 8px 16px;
+}
+
+nav ul li a {
+    color: var(--black);
+    line-height: 30px;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+.active {
+    font-weight: 500;
+    border-bottom: 2px solid #fd8c73;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% auto;
+    max-width: 1280px;
+    grid-gap: 20px;
+}
+
+aside {
+    margin-top: -32px;     z-index: 1 ;
+}
+
+aside figure img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #d0d7de;
+    z-index: 1 ;
+}
+
+aside h1 {
+    font-size: 26px;
+    padding: 16px 0;
+    line-height: 32px;
+    color: var(--black);
+    word-wrap: break-word;
+    /* top: 0;
+    position: sticky; */
+    font-weight: 600;
+}
+
+aside h1 span {
+    display: block;
+    font-size: 20px;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 24px;
+}
+
+aside .btn {
+    word-wrap: break-word;
+    box-sizing: border-box;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 6px;
+    color: var(--black);
+    background-color: #f3f4f6;
+    border-color: #1b1f2426;
+    box-shadow: #1b1f240a 0px 1px 0px 0px, #ffffff40 0px 1px 0px 0px inset;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.user-info {
+    z-index: 1000;
+}
+
+.user-info .bio {
+    color: var(--black);
+    display: block;
+    font-size: 16px;
+    margin-bottom: 16px;
+    word-wrap: break-word;
+    line-height: 24px;
+    overflow-wrap: break-word;
+}
+
+.user-info .follow {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.user-info .follow a {
+    color: var(--gray);
+}
+
+.user-info .follow a i {
+    margin-right: 4px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.user-info .follow a span {
+    margin-right: 4px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.contacts {
+    list-style: none;
+    color: var(--black);
+}
+
+.contacts li {
+    font-size: 14px;
+    padding-top: 4px;
+    text-align: left;
+}
+
+.contacts li span i {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.contacts li a, .contacts li span {
+    font-size: 14px;
+    color: var(--black);
+}
+
+.icon {
+    width: 16px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+.repo {
+    padding: 24px 0;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.repo .repos-name a {
+    color: #0969da;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-size: 20px;
+    font-weight: 600;
+    word-break: break-all;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.repo .repos-name a:hover {
+    text-decoration: underline;
+}
+
+.repo .repos-name span {
+    word-wrap: break-word;
+    word-break: break-all;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    display: inline-block;
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    border: 1px solid #cfd6de;
+    border-radius: 2em;
+    color: var(--gray);
+}
+
+.repo .repos-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray);
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin-top: 0;
+    width: 74.99999997%;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.repo div {
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    margin-top: 8px;
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.repo div span {
+    margin-right: 16px;
+    font-size: 12px;
+}
+
+.repo div span i {
+    margin-right: 2px;
+}
+
+.alert{ 
+    color: red;  
+    font-size: 12px;
+}
